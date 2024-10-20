@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+#define MAX_WORDS 100
+#define MAX_LENGTH 50
+
+int main() {
+    char words[MAX_WORDS][MAX_LENGTH]; // 단어 배열
+    int count = 0; // 단어 개수
+
+    printf("단어를 입력하세요 (종료하려면 'exit' 입력):\n");
+
+    while (count < MAX_WORDS) {
+        printf("단어 %d: ", count + 1);
+        fgets(words[count], MAX_LENGTH, stdin); // 단어 입력 받기
+
+        // 'exit' 입력 시 종료
+        if (strncmp(words[count], "exit", 4) == 0) {
+            break;
+        }
+
+        count++;
+    }
+
+    printf("\n입력한 단어들:\n");
+    for (int i = 0; i < count; i++) {
+        printf("%s", words[i]); // 저장된 단어 출력
+    }
+
+    return 0;
+}
