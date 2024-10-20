@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main() {
+    // 현재 시간을 시드로 사용하여 난수 생성기 초기화
+    srand(time(NULL));
+
+    // 랜덤 변수 생성 (0부터 RAND_MAX까지)
+    int random_number = rand();
+
+    // 특정 범위의 랜덤 변수 생성 (예: 1부터 100까지)
+    int min = 1;
+    int max = 100;
+    int random_in_range = (rand() % (max - min + 1)) + min;
+
+    // 결과 출력
+    printf("랜덤 숫자 (0 ~ %d): %d\n", RAND_MAX, random_number);
+    printf("랜덤 숫자 (1 ~ 100): %d\n", random_in_range);
+
+    return 0;
+}
