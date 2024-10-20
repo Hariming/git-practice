@@ -1,4 +1,4 @@
-## Hello Welcome my name is Kim Hyun Seok
+## Lab7
 
 <!--
 **Hariming/Hariming** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
